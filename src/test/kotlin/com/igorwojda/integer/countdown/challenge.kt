@@ -4,14 +4,14 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun countDown(n: Int): List<Int> {
-   //1
-   // return (n downTo 0).toList()
+    //1
+    // return (n downTo 0).toList()
 
-    if (n==0){
+    if (n == 0) {
         return listOf(0)
     }
 
-    return mutableListOf(n).also { it.addAll(countDown(n-1)) }
+    return mutableListOf(n).also { it.addAll(countDown(n - 1)) }
 }
 
 private class Test {

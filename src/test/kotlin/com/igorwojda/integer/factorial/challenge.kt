@@ -4,7 +4,16 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun factorial(n: Int): Int {
-    TODO("not implemented")
+    var factorialNumber = 1
+
+    if (n < 1) {
+        return 1
+    }
+
+    for (i in 1..n) {
+        factorialNumber *= i
+    }
+    return factorialNumber
 }
 
 class RecursiveFactorial {

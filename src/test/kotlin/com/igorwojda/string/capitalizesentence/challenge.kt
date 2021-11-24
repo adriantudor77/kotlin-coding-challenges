@@ -6,9 +6,11 @@ import org.junit.jupiter.api.Test
 private fun capitalizeSentence(str: String): String {
     val words = str.split(" ").toMutableList()
     var output = ""
-    for (word in words){
-        output+=word.capitalize() + " "
+
+    for (word in words) {
+        output += word.capitalize() + " "
     }
+
     output = output.trim()
     return output
 }
