@@ -4,15 +4,7 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun capitalizeSentence(str: String): String {
-    val words = str.split(" ").toMutableList()
-    var output = ""
-
-    for (word in words) {
-        output += word.capitalize() + " "
-    }
-
-    output = output.trim()
-    return output
+    return str.split(" ").joinToString(" ") { it.capitalize() }
 }
 
 private class Test {

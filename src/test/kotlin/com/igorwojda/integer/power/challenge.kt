@@ -5,7 +5,14 @@ import org.junit.jupiter.api.Test
 import kotlin.math.pow
 
 private fun power(base: Int, exponent: Int): Int {
-    return base.toDouble().pow(exponent).toInt()
+    //1
+    // return base.toDouble().pow(exponent).toInt()
+
+    if (exponent == 1) {
+        return base
+    }
+
+    return base * power(base, exponent - 1)
 }
 
 private class Test {

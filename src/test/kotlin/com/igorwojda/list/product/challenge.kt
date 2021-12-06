@@ -4,10 +4,15 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun product(list: List<Int>): Int {
-    if (list.size == 1) {
+
+    return list.reduce { accumulated, current -> accumulated * current }
+
+    //1
+    /*if (list.size == 1) {
         return list.first()
     }
-    return list.first() * product(list.drop(1))
+
+    return list.first() * product(list.drop(1))*/
 
     //2
     //return list.reduce { acc, i -> accumulated * i }
