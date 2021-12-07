@@ -2,17 +2,30 @@ package com.igorwojda.integer.power
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
+import kotlin.math.exp
 import kotlin.math.pow
+import kotlin.text.Typography.times
+
+
 
 private fun power(base: Int, exponent: Int): Int {
+
+    var listOfPowerBaseAndExponent = List(exponent) { base }
+    return listOfPowerBaseAndExponent.reduce(Int::times)
+
     //1
-    // return base.toDouble().pow(exponent).toInt()
+    /* var value = 1
+     var similar = base
 
-    if (exponent == 1) {
-        return base
-    }
+     for (i in 1..exponent) {
 
-    return base * power(base, exponent - 1)
+         if (value == exponent) {
+             return similar
+         } else
+             value++
+             similar *= base
+     }*/
+
 }
 
 private class Test {
